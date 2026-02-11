@@ -9,7 +9,6 @@ export const useMovieStore = create((set) => ({
   setTypeFilter: (type) => set({ typeFilter: type }),
   fetchMovies: async (query, type) => {
     set({ loading: true });
-    // USING YOUR API KEY DIRECTLY TO ENSURE IT WORKS
     const apiKey = "8841440d"; 
     try {
       const res = await fetch(`https://www.omdbapi.com/?s=${query}&type=${type}&apikey=${apiKey}`);
