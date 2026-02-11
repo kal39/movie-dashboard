@@ -14,20 +14,20 @@ export default function LoginPage() {
       alignItems: 'center', 
       justifyContent: 'center', 
       backgroundColor: '#050505', 
-      /* FIXED: Added missing commas below */
+      
       backgroundImage: 'radial-gradient(circle, #fdc50e 0% , #fc6c0d 100%)',
       fontFamily: 'sans-serif',
       position: 'relative'
     }}>
-      {/* LOGIN BOX */}
+     
       <div style={{ 
         width: '400px', 
-        backgroundColor: 'rgba(10, 10, 10, 0.95)', // Solid dark gray/black
+        backgroundColor: 'rgba(10, 10, 10, 0.95)', 
         backdropFilter: 'blur(10px)',
         borderRadius: '24px', 
         boxShadow: '0 25px 50px rgba(0,0,0,0.6)', 
         overflow: 'hidden', 
-        border: '1px solid rgba(251, 133, 0, 0.2)' // Faint orange rim to match your theme
+        border: '1px solid rgba(251, 133, 0, 0.2)' 
       }}>
         <div style={{ backgroundColor: '#111', padding: '40px', textAlign: 'center', borderBottom: '1px solid #1a1a1a' }}>
           <Fingerprint size={40} color="#fb8500" style={{ marginBottom: '10px' }} />

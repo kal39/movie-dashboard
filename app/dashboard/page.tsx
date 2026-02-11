@@ -53,7 +53,7 @@ export default function DashboardPage() {
   return (
     <div style={{ display: 'flex', height: '100vh', backgroundColor: '#050505', color: 'white', fontFamily: 'monospace', overflow: 'hidden' }}>
       
-      {/* SIDEBAR */}
+
       {view === "feed" && (
         <aside style={{ width: '260px', backgroundColor: '#0a0a0a', borderRight: '1px solid #1a1a1a', padding: '30px', display: 'flex', flexDirection: 'column' }}>
           <div style={{ marginBottom: '40px' }}>
@@ -97,7 +97,7 @@ export default function DashboardPage() {
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '25px' }}>
                 {movies.map((m: any, index: number) => (
-                  /* FIX: Unique key using imdbID and index */
+                 
                   <div key={`${m.imdbID}-${index}`} className="movie-card">
                     <img src={m.Poster} style={{ width: '100%', height: '280px', objectFit: 'cover' }} />
                     <div className="card-overlay">
@@ -146,7 +146,6 @@ export default function DashboardPage() {
                   
                   <div style={{ display: 'flex', gap: '10px', margin: '15px 0' }}>
                     <span style={{ color: '#5cb85c', border: '1px solid #5cb85c', padding: '2px 8px', fontSize: '10px' }}>{selectedMovie.imdbRating}</span>
-                    {/* GENRE preserved for both views */}
                     <span style={{ color: '#fb8500', border: '1px solid #fb8500', padding: '2px 8px', fontSize: '10px' }}>{selectedMovie.Genre?.toUpperCase()}</span>
                     {isFullDossier && <span style={{ color: '#aaa', border: '1px solid #444', padding: '2px 8px', fontSize: '10px' }}>{selectedMovie.Runtime}</span>}
                   </div>

@@ -5,7 +5,7 @@ import { ShieldCheck, Activity, Fingerprint, Lock, Unlock, Cpu } from "lucide-re
 
 export default function WelcomePage() {
   const router = useRouter();
-  const [stage, setStage] = useState("WAITING"); // WAITING, SCANNING, ACCESS_GRANTED
+  const [stage, setStage] = useState("WAITING"); 
   const [progress, setProgress] = useState(0);
   const [logs, setLogs] = useState<string[]>([]);
 
@@ -32,7 +32,6 @@ export default function WelcomePage() {
           return 100;
         }
         
-        // Add a new log every 15% progress
         if (prev % 15 === 0 && logIndex < systemLogs.length) {
           setLogs(prevLogs => [...prevLogs, systemLogs[logIndex]]);
           logIndex++;
@@ -46,7 +45,7 @@ export default function WelcomePage() {
   return (
     <div style={{ height: '100vh', backgroundColor: '#050505', color: '#fb8500', fontFamily: 'monospace', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', overflow: 'hidden', position: 'relative' }}>
       
-      {/* FIXED: zIndex (camelCase) and proper string quoting */}
+     
       <div style={{ 
         position: 'absolute', 
         width: '100%', 
