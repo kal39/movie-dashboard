@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import { Sidebar } from "@/components/Sidebar";
+import { sidebar } from "@/components/sidebar";
 import { Trash2, ShieldCheck } from "lucide-react";
 import { useMovieStore } from "@/store/useMovieStore";
 
 export default function ArchivePage() {
-  const { movies } = useMovieStore(); // In a real app, use a 'favorites' state
+  const { movies } = useMovieStore();
 
   return (
     <div className="flex h-screen overflow-hidden">
